@@ -23,5 +23,8 @@ class ServiceCenter:
 if __name__ == "__main__":
     sc = ServiceCenter()
     while True:
-        sc.generate_request()
-        sc.process_request()
+        try:
+            sc.generate_request()
+            sc.process_request()
+        except KeyboardInterrupt:
+            exit()
